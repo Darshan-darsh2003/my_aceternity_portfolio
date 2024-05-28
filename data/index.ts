@@ -2,6 +2,7 @@ export const navItems = [
   { name: "About", link: "/" },
   { name: "Projects", link: "/projects" },
   { name: "Skills", link: "/skills" },
+  { name: "Resume", link: "/resume" },
   { name: "Contact", link: "/contact" },
 ];
 
@@ -136,6 +137,253 @@ export const testimonials = [
     title: "Director of AlphaStream Technologies",
   },
 ];
+
+const LOGO = {
+  html: "./assets/html.svg",
+  css: "./assets/css.svg",
+  javascript: "./assets/javascript.svg",
+  typescript: "./assets/typescript.svg",
+  dart: "./assets/dart.svg",
+  python: "./assets/python.svg",
+  java: "./assets/java.svg",
+  react: "./assets/react.svg",
+  flutter: "./assets/flutter.svg",
+  node: "./assets/node-js.svg",
+  flask: "./assets/flask.svg",
+  django: "./assets/django.svg",
+  git: "./assets/git.svg",
+  gitlab: "./assets/gitlab.svg",
+  github: "./assets/github.svg",
+  mySql: "./assets/mysql.svg",
+  sqlLite: "./assets/sqlite.svg",
+  mongodb: "./assets/mongodb.svg",
+  postgreSql: "./assets/postgreSql.svg",
+  bootstrap: "./assets/bootstrap.svg",
+  tailwind: "./assets/tailwind.svg",
+  materialUI: "./assets/materialUI.svg",
+  mantineUI: "./assets/mantineUI.svg",
+  shadcnUI: "./assets/shadcnUI.svg",
+  kafka: "./assets/kafka.svg",
+  gitlabCICD: "./assets/gitlab.svg",
+  docker: "./assets/docker.svg",
+  jenkins: "./assets/jenkins.svg",
+};
+
+export const skills = {
+  languages: [
+    {
+      logo: LOGO.html,
+      name: "Html",
+      description: "Used for structuring web pages.",
+    },
+    {
+      logo: LOGO.css,
+      name: "Css",
+      description: "Used for styling web pages.",
+    },
+    {
+      logo: LOGO.javascript,
+      name: "JavaScript",
+      description: "Used for creating interactive web applications.",
+    },
+    {
+      logo: LOGO.typescript,
+      name: "TypeScript",
+      description: "A superset of JavaScript that adds static types.",
+    },
+    {
+      logo: LOGO.dart,
+      name: "Dart",
+      description: "Used for building web, server, and mobile applications.",
+    },
+    {
+      logo: LOGO.python,
+      name: "Python",
+      description:
+        "A versatile programming language used for web development, data science, automation, and more.",
+    },
+    {
+      logo: LOGO.java,
+      name: "Java",
+      description:
+        "A widely-used programming language for building server-side applications, Android apps, and more.",
+    },
+  ],
+  frameworks: {
+    webDevelopment: [
+      {
+        logo: LOGO.react,
+        name: "React JS",
+        description: "A JavaScript library for building user interfaces.",
+      },
+      {
+        logo: LOGO.node,
+
+        name: "Node JS",
+        description:
+          "A JavaScript runtime built on Chrome's V8 JavaScript engine, used for building scalable network applications.",
+      },
+      {
+        logo: LOGO.flask,
+        name: "Flask",
+        description: "A lightweight WSGI web application framework in Python.",
+      },
+      {
+        logo: LOGO.django,
+
+        name: "Django",
+        description:
+          "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+      },
+    ],
+    android: [
+      {
+        logo: LOGO.flutter,
+
+        name: "Flutter",
+        description:
+          "A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+      },
+    ],
+    // backend: [
+    //   {
+    //     logo: LOGO.node,
+
+    //     name: "Node JS",
+    //     description:
+    //       "A JavaScript runtime built on Chrome's V8 JavaScript engine, used for building scalable network applications.",
+    //   },
+    //   {
+    //     logo: LOGO.flask,
+    //     name: "Flask",
+    //     description: "A lightweight WSGI web application framework in Python.",
+    //   },
+    //   {
+    //     logo: LOGO.django,
+
+    //     name: "Django",
+    //     description:
+    //       "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+    //   },
+    // ],
+  },
+  sourceControl: [
+    {
+      logo: LOGO.git,
+      name: "Git",
+      description:
+        "A distributed version control system for tracking changes in source code during software development.",
+    },
+    {
+      logo: LOGO.gitlab,
+      name: "GitLab",
+      description:
+        "A web-based DevOps lifecycle tool that provides a Git repository manager providing wiki, issue-tracking, and CI/CD pipeline features.",
+    },
+    {
+      logo: LOGO.github,
+      name: "GitHub",
+      description:
+        "A platform for version control and collaboration, allowing multiple people to work on projects at the same time.",
+    },
+  ],
+  // architecture: [
+  //   {
+  //     logo: LOGO.html,
+  //     name: "Bloc pattern",
+  //     description:
+  //       "A design pattern for managing state in a Flutter application.",
+  //   },
+  //   {
+  //     logo: LOGO.html,
+  //     name: "MVVM",
+  //     description:
+  //       "Model-View-ViewModel is a software architectural pattern that facilitates the separation of the development of the graphical user interface.",
+  //   },
+  // ],
+  databases: [
+    {
+      logo: LOGO.mySql,
+      name: "MySQL",
+      description: "An open-source relational database management system.",
+    },
+    {
+      logo: LOGO.sqlLite,
+      name: "SQLite",
+      description:
+        "A C-language library that provides a lightweight, disk-based database.",
+    },
+    {
+      logo: LOGO.postgreSql,
+      name: "PostgreSQL",
+      description: "A powerful, open-source object-relational database system.",
+    },
+    {
+      logo: LOGO.mongodb,
+      name: "MongoDB",
+      description:
+        "A document-oriented NoSQL database used for high volume data storage.",
+    },
+  ],
+  uiLibraries: [
+    {
+      logo: LOGO.bootstrap,
+      name: "Bootstrap",
+      description:
+        "A free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
+    },
+    {
+      logo: LOGO.tailwind,
+      name: "Tailwind CSS",
+      description:
+        "A utility-first CSS framework for rapidly building custom user interfaces.",
+    },
+    {
+      logo: LOGO.materialUI,
+      name: "Material UI",
+      description:
+        "A popular React UI framework that implements Google's Material Design.",
+    },
+    {
+      logo: LOGO.mantineUI,
+      name: "Mantine UI",
+      description:
+        "A fully-featured React components library for building fast and accessible web applications.",
+    },
+    // {
+    //   logo: LOGO.shadcnUI,
+    //   name: "Shadcn UI",
+    //   description:
+    //     "A UI component library for building accessible, responsive web interfaces.",
+    // },
+  ],
+  otherTools: [
+    {
+      logo: LOGO.kafka,
+      name: "Kafka",
+      description:
+        "A distributed streaming platform used for building real-time data pipelines and streaming applications.",
+    },
+    {
+      logo: LOGO.gitlabCICD,
+      name: "GitLab CI/CD",
+      description:
+        "A continuous integration and continuous delivery (CI/CD) solution integrated with GitLab.",
+    },
+    {
+      logo: LOGO.docker,
+      name: "Docker",
+      description:
+        "A platform for developing, shipping, and running applications inside containers.",
+    },
+    {
+      logo: LOGO.jenkins,
+      name: "Jenkins",
+      description:
+        "An open-source automation server which enables developers to build, test, and deploy their software.",
+    },
+  ],
+};
 
 export const companies = [
   {

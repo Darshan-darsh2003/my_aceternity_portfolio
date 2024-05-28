@@ -10,6 +10,7 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
+import { skills } from "@/data";
 
 function ProjectsPage() {
   return (

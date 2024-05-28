@@ -26,12 +26,12 @@ export const FloatingNav = ({
     typeof window !== "undefined" ? window.location.pathname : "";
 
   const [visible, setVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("/");
+  const [selectedItem, setSelectedItem] = useState(window.location.pathname);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
-      if (scrollYProgress.get() < 0.05) {
+      if (scrollYProgress.get() < 0.01) {
         setVisible(false);
       } else {
         if (direction < 0) {
