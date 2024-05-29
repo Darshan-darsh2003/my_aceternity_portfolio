@@ -26,19 +26,32 @@ export const FloatingNav = ({
     typeof window !== "undefined" ? window.location.pathname : "";
 
   const [visible, setVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(window.location.pathname);
+  const [selectedItem, setSelectedItem] = useState(
+    typeof window !== "undefined" ? window.location.pathname : ""
+  );
+
+  // useMotionValueEvent(scrollYProgress, "change", (current) => {
+  //   if (typeof current === "number") {
+  //     let direction = current! - scrollYProgress.getPrevious()!;
+  //     if (scrollYProgress.get() < 0.01) {
+  //       setVisible(false);
+  //     } else {
+  //       if (direction < 0) {
+  //         setVisible(true);
+  //       } else {
+  //         setVisible(false);
+  //       }
+  //     }
+  //   }
+  // });
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
-      if (scrollYProgress.get() < 0.01) {
-        setVisible(false);
+      if (direction < 0) {
+        setVisible(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(false);
       }
     }
   });

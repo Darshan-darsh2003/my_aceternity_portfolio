@@ -5,6 +5,7 @@ import {
   BentoGridItem,
   SkillCard,
 } from "../components/ui/bento-grid";
+import { SparklesCore } from "../components/ui/sparkles";
 
 interface WrapperProps {
   children: Skill[];
@@ -42,6 +43,17 @@ const Skills = () => {
 const Wrapper = ({ title, children }: WrapperProps) => {
   return (
     <div className="mt-10">
+      <div className="w-full absolute inset-0 h-full pointer-events-none">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
       <h1 className="text-3xl md:text-2xl font-bold dark:text-white text-center">
         {title}
       </h1>
