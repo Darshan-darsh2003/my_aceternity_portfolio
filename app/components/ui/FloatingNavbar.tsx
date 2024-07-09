@@ -22,12 +22,11 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-  const location =
-    typeof window !== "undefined" ? window.location.pathname : "";
+  const location = window.location.pathname ?? "";
 
   const [visible, setVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(
-    typeof window !== "undefined" ? window.location.pathname : ""
+    window.location.pathname ?? ""
   );
 
   // useMotionValueEvent(scrollYProgress, "change", (current) => {

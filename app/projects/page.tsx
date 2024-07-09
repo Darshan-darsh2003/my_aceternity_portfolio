@@ -15,6 +15,11 @@ const ProjectsPage = () => {
           particleColor="#FFFFFF"
         />
       </div>
+      <div className="h-screen flex justify-center items-center">
+        <h1 className="text-8xl font-bold text-center text-white ">
+          My Projects
+        </h1>
+      </div>
     </div>
   );
 };

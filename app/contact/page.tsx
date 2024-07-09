@@ -10,6 +10,13 @@ import axios from "axios";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+interface FormValues {
+  firstname: string;
+  lastname: string;
+  email: string;
+  message: string;
+}
+
 const validationSchema = Yup.object({
   firstname: Yup.string().required("Required"),
   lastname: Yup.string().required("Required"),
@@ -18,7 +25,7 @@ const validationSchema = Yup.object({
 });
 
 export default function ContactPage() {
-  const handleSubmit = async (values, { setSubmitting }) => {
+  const handleSubmit = async (values: FormValues, { setSubmitting }: any) => {
     try {
       console.log(values);
       const response = await axios.post("/api/contact", values);
