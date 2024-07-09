@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const FloatingNav = ({
   navItems,
@@ -22,12 +23,10 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-  const location = window.location.pathname ?? "";
+  const location = usePathname();
 
   const [visible, setVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(
-    window.location.pathname ?? ""
-  );
+  const [selectedItem, setSelectedItem] = useState(location ?? "");
 
   // useMotionValueEvent(scrollYProgress, "change", (current) => {
   //   if (typeof current === "number") {
